@@ -11,7 +11,6 @@ $(function(){
             type: "POST",
             data: newEntry
         }).then(function () {
-            console.log("JS - Created new burger!");
             location.reload();
         });
         
@@ -23,15 +22,14 @@ $(function(){
 
         var id = $(this).data("id");
 
-        var eatIt = {
-            devoured: true
-        }
-
+        // var eatIt = {
+        //     devoured: true
+        // };
+    
         $.ajax("/api/bugers/" + id, {
             type: "PUT",
-            data: eatIt
+            // data: eatIt
         }).then(function () {
-            console.log("JS - Burger has been eaten." + eatIt.devoured);
             location.reload();
         });
     });

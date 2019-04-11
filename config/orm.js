@@ -22,9 +22,18 @@ var orm = {
             }
             cb(result);
         });
-    }
+    },
     // put
-    
+    update: function(table, col, val, condition, cb){
+        var queryString = "UPDATE ?? SET ?? = ? WHERE ";
+        
+        connection.query(queryString, [table, col, val, condition], function(err, result){
+            if(err){
+                throw err;
+            }
+            cb(result);
+        });
+    }
 };
 
 // export the ORM object
