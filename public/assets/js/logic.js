@@ -3,8 +3,9 @@ $(function(){
         event.preventDefault();
 
         var newEntry = {
-            burger_name: $("#newBurger").val()
+            name: $("#new-burger").val()
         };
+        console.log(newEntry);
 
         $.ajax("/api/burgers", {
             type: "POST",
@@ -13,6 +14,7 @@ $(function(){
             console.log("JS - Created new burger!");
             location.reload();
         });
+        
     });
 
 

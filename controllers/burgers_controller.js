@@ -14,6 +14,12 @@ router.get("/", function(req, res){
 });
 
 // need my post route
+router.post("/api/burgers", function(req, res){
+    console.log(req.body.name);
+    burger.create("burger_name", req.body.name, function(result){
+        res.json({ id: result.insertId });
+    });
+});
 // need my put route
 
 
