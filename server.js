@@ -6,8 +6,8 @@ var PORT = process.env.PORT || 8080;
 
 var app = express();
 
-// needed if you decide to have a stylesheet
-// app.use(express.static("public"));
+// to have a stylesheet
+app.use(express.static("public"));
 
 // middleware to parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
