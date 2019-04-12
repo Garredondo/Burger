@@ -23,11 +23,11 @@ router.post("/api/burgers", function(req, res){
 // put - update
 router.put("/api/burgers/:id", function(req, res){
 
-    var condition = "id = " + req.params.id + ";";
+    var id = req.params.id;
 
-    console.log(condition);
+    console.log(id);
 
-    burger.update(condition, function(result){
+    burger.update(id, function(result){
         if(result.changedRows == 0){
             return res.status(404).end();
         } else {

@@ -22,13 +22,13 @@ $(function(){
 
         var id = $(this).data("id");
 
-        // var eatIt = {
-        //     devoured: true
-        // };
+        var eatIt = {
+            id: $(this).data("id")
+        };
     
-        $.ajax("/api/bugers/" + id, {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            // data: eatIt
+            data: eatIt
         }).then(function () {
             location.reload();
         });

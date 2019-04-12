@@ -24,10 +24,10 @@ var orm = {
         });
     },
     // put
-    update: function(table, col, val, condition, cb){
-        var queryString = "UPDATE ?? SET ?? = ? WHERE ";
+    update: function(table, col, val, idCol, id, cb){
+        var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?;";
         
-        connection.query(queryString, [table, col, val, condition], function(err, result){
+        connection.query(queryString, [table, col, val, idCol, id], function(err, result){
             if(err){
                 throw err;
             }
