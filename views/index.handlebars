@@ -1,19 +1,19 @@
 <div class="wrapper">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Mmmm...</h1>
+            <h1>Burger Bar</h1>
         </div>
     </div>
 
     <div class="row">
         <div class="col-sm-12" id="burger">
-            <img src="http://clipart-library.com/data_images/149301.png" alt="Burger" height="100" width="100">
+            <img src="../assets/img/burger.png" alt="Burger" height="100" width="100">
         </div>
     </div>
 
     <div class="row">
         <div class="col-sm-6">
-            <h2>Burgers To Eat</h2>
+            <h2>Burgers to Eat</h2>
             <ul>
                 {{#each burgers}}
                 {{#unless this.devoured}}
@@ -45,7 +45,7 @@
                 <div class="form-group">
                     <textarea id="new-burger" name="newBurger" rows="2"></textarea>
                 </div>
-                <button id="submit" type="submit">Add Burger!</button>
+                <button id="submit" type="submit" class="btn btn-danger">Add Burger!</button>
             </form>
         </div>
         <div class="col-sm-4">
