@@ -1,28 +1,60 @@
-<h1>Mmmm...</h1>
-
-<h2>Burgers To Eat</h2>
-<ul>
-    {{#each burgers}}
-        {{#unless this.devoured}}
-            <p>{{this.burger_name}} <button data-id="{{this.id}}" class="moveBurger">Devour!!</button></p>
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers Eaten</h2>
-<ul>
-    {{#each burgers}}
-        {{#if this.devoured}}
-            <p>{{this.burger_name}}</p>
-        {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-    <div class="form-group">
-        <textarea id="new-burger" name="newBurger" rows="2" cols="40"></textarea>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Mmmm...</h1>
+        </div>
     </div>
 
-    <button id="submit" type="submit">Add Burger!</button>
-</form>
+    <div class="row">
+        <div class="col-sm-12" id="burger">
+            <img src="http://clipart-library.com/data_images/149301.png" alt="Burger" height="100" width="100">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Burgers To Eat</h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless this.devoured}}
+                <p>{{this.burger_name}} <button data-id="{{this.id}}" class="moveBurger">Devour!!</button></p>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="col-sm-6">
+            <h2>Burgers Devoured</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if this.devoured}}
+                <p>{{this.burger_name}}</p>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            {{!-- left blank --}}
+        </div>
+        <div class="col-sm-4">
+            <h3>Add a Burger</h3>
+            <form class="create-form">
+                <div class="form-group">
+                    <textarea id="new-burger" name="newBurger" rows="2"></textarea>
+                </div>
+                <button id="submit" type="submit">Add Burger!</button>
+            </form>
+        </div>
+        <div class="col-sm-4">
+            {{!-- left blank --}}
+        </div>
+    </div>
+
+
+
+
+
+</div>
